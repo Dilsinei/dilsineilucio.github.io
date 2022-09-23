@@ -6,6 +6,30 @@
 		<title>Minha Página</title>
 		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<script type="text/javascript">
+	        window.onload = function(){
+	      	var txtTitulo = 'Olá, meu nome é Dilsinei Lúcio e eu sou Analista de Sistemas.';
+	      	var txt1 = document.getElementById("titulo");
+	      
+	      	var speed = 100;
+	      	var cont = 0;
+
+	      	function typeWriter () {
+	        	if(cont < txtTitulo.length){
+	          		txt1.innerHTML += "<u>" + txtTitulo.charAt(cont) + "</u>";
+	          		cont++;
+	          		setTimeout(typeWriter, speed);
+	         	}else{
+	           		cont = 0;
+	         	}
+	        }
+
+	       	typeWriter();
+	    	};
+		</script>
+
+
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-sm  navbar-light">
@@ -15,7 +39,7 @@
 			<div class='collapse navbar-collapse'>
 			  <ul class='navbar-nav'>
 				<li class='nav-item active'>
-				  <a class='nav-link' href='#'>Quem somos</a>
+				  <a class='nav-link' href="https://www.linkedin.com/in/dilsineilucio/" target="_blank">Quem sou</a>
 				</li>
 				<li class='nav-item active'>
 				  <a class='nav-link' href='#'>Parceiros</a>
@@ -33,11 +57,11 @@
 		  </section>
 		<h1 style="text-align: center;">Bem vindo(a) a minha página!</h1>
 		<center>
-			<a href="https://www.instagram.com/dilsineilucio/?hl=pt-br" target="_blank">
-				<img src="imagens/perfil.jpg">
+			<a href=>
+				<img src="img/perfil.jpg">
 			</a>
 		</center>
-		<p style="text-align: center;">Olá, meu nome é Dilsinei Lúcio e eu sou Analista de Sistemas</p>
+		<p id="titulo" style="text-align: center;"></p>
 		
 
 	
