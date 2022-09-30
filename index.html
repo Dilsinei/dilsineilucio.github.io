@@ -1,69 +1,858 @@
 <!DOCTYPE html>
-	<html lang="pt-br">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Minha Página</title>
-		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+<html lang="pt-br">
 
-		<script type="text/javascript">
-	        window.onload = function(){
-	      	var txtTitulo = 'Olá, meu nome é Dilsinei Lúcio e eu sou Analista de Sistemas.';
-	      	var txt1 = document.getElementById("titulo");
-	      
-	      	var speed = 100;
-	      	var cont = 0;
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Resume &#8211; Dilsinei Lúcio Desenvolvedor Back-End</title>
 
-	      	function typeWriter () {
-	        	if(cont < txtTitulo.length){
-	          		txt1.innerHTML += "<u>" + txtTitulo.charAt(cont) + "</u>";
-	          		cont++;
-	          		setTimeout(typeWriter, speed);
-	         	}else{
-	           		cont = 0;
-	         	}
-	        }
+	<meta name="author" content="Dilsinei - (31) 99567-8465" />
+	<meta name="copyright" content="Copyright 2022. Todos os direitos reservados." />
+	<meta name="geo.placename" content="Minas Gerais, Brasil" />
 
-	       	typeWriter();
-	    	};
-		</script>
+	<meta property="#portfolio" content="Desenvolvimento Back-End" />
+	<meta property="og:site_name" content="Back End Dilsinei Lúcio" />
+	<meta property="og:image" content="img/dllogo.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Google fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,600,700,800,900&display=swap"
+		rel="stylesheet">
+	<!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+	<link rel="stylesheet" href="css/all.css">
 
+	<link rel="shortcut icon" href="../portfolio/img/favincon.png">
 
-	</head>
-	<body>
-		<nav class="navbar navbar-expand-sm  navbar-light">
-			<a class='navbar-brand' href='#'>
-			  <img src='img/dllogo.png' width=88 height=64>
-			</a>
-			<div class='collapse navbar-collapse'>
-			  <ul class='navbar-nav'>
-				<li class='nav-item active'>
-				  <a class='nav-link' href="https://www.linkedin.com/in/dilsineilucio/" target="_blank">Quem sou</a>
-				</li>
-				<li class='nav-item active'>
-				  <a class='nav-link' href='#'>Parceiros</a>
-				</li>
-				<li class='nav-item active'>
-				  <a class='nav-link' href='#'>Serviços</a>
-				</li>
-			  </ul>
-			</div>   
-		  </nav>
-		  <section id='quemsomos'>
-			<div class= 'container-fluid text-center quemsomos'>
-			  <p>Quem Somos</p>
+	<!-- Inicio Wordpress Header -->
+	<meta name='robots' content='max-image-preview:large' />
+	<link rel='dns-prefetch' href='//s.w.org' />
+	<link rel='stylesheet' id='wp-block-library-css' href='css/style.min.css' type='text/css' media='all' />
+	<style id='global-styles-inline-css' type='text/css'>
+		body {
+			--wp--preset--color--black: #000000;
+			--wp--preset--color--cyan-bluish-gray: #abb8c3;
+			--wp--preset--color--white: #ffffff;
+			--wp--preset--color--pale-pink: #f78da7;
+			--wp--preset--color--vivid-red: #cf2e2e;
+			--wp--preset--color--luminous-vivid-orange: #ff6900;
+			--wp--preset--color--luminous-vivid-amber: #fcb900;
+			--wp--preset--color--light-green-cyan: #7bdcb5;
+			--wp--preset--color--vivid-green-cyan: #00d084;
+			--wp--preset--color--pale-cyan-blue: #8ed1fc;
+			--wp--preset--color--vivid-cyan-blue: #0693e3;
+			--wp--preset--color--vivid-purple: #9b51e0;
+			--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+			--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+			--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+			--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+			--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+			--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+			--wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+			--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+			--wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+			--wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+			--wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+			--wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+			--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');
+			--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');
+			--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');
+			--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');
+			--wp--preset--duotone--midnight: url('#wp-duotone-midnight');
+			--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');
+			--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');
+			--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');
+			--wp--preset--font-size--small: 13px;
+			--wp--preset--font-size--medium: 20px;
+			--wp--preset--font-size--large: 36px;
+			--wp--preset--font-size--x-large: 42px;
+		}
+
+		.has-black-color {
+			color: var(--wp--preset--color--black) !important;
+		}
+
+		.has-cyan-bluish-gray-color {
+			color: var(--wp--preset--color--cyan-bluish-gray) !important;
+		}
+
+		.has-white-color {
+			color: var(--wp--preset--color--white) !important;
+		}
+
+		.has-pale-pink-color {
+			color: var(--wp--preset--color--pale-pink) !important;
+		}
+
+		.has-vivid-red-color {
+			color: var(--wp--preset--color--vivid-red) !important;
+		}
+
+		.has-luminous-vivid-orange-color {
+			color: var(--wp--preset--color--luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-amber-color {
+			color: var(--wp--preset--color--luminous-vivid-amber) !important;
+		}
+
+		.has-light-green-cyan-color {
+			color: var(--wp--preset--color--light-green-cyan) !important;
+		}
+
+		.has-vivid-green-cyan-color {
+			color: var(--wp--preset--color--vivid-green-cyan) !important;
+		}
+
+		.has-pale-cyan-blue-color {
+			color: var(--wp--preset--color--pale-cyan-blue) !important;
+		}
+
+		.has-vivid-cyan-blue-color {
+			color: var(--wp--preset--color--vivid-cyan-blue) !important;
+		}
+
+		.has-vivid-purple-color {
+			color: var(--wp--preset--color--vivid-purple) !important;
+		}
+
+		.has-black-background-color {
+			background-color: var(--wp--preset--color--black) !important;
+		}
+
+		.has-cyan-bluish-gray-background-color {
+			background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+		}
+
+		.has-white-background-color {
+			background-color: var(--wp--preset--color--white) !important;
+		}
+
+		.has-pale-pink-background-color {
+			background-color: var(--wp--preset--color--pale-pink) !important;
+		}
+
+		.has-vivid-red-background-color {
+			background-color: var(--wp--preset--color--vivid-red) !important;
+		}
+
+		.has-luminous-vivid-orange-background-color {
+			background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-amber-background-color {
+			background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+		}
+
+		.has-light-green-cyan-background-color {
+			background-color: var(--wp--preset--color--light-green-cyan) !important;
+		}
+
+		.has-vivid-green-cyan-background-color {
+			background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+		}
+
+		.has-pale-cyan-blue-background-color {
+			background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+		}
+
+		.has-vivid-cyan-blue-background-color {
+			background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+		}
+
+		.has-vivid-purple-background-color {
+			background-color: var(--wp--preset--color--vivid-purple) !important;
+		}
+
+		.has-black-border-color {
+			border-color: var(--wp--preset--color--black) !important;
+		}
+
+		.has-cyan-bluish-gray-border-color {
+			border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+		}
+
+		.has-white-border-color {
+			border-color: var(--wp--preset--color--white) !important;
+		}
+
+		.has-pale-pink-border-color {
+			border-color: var(--wp--preset--color--pale-pink) !important;
+		}
+
+		.has-vivid-red-border-color {
+			border-color: var(--wp--preset--color--vivid-red) !important;
+		}
+
+		.has-luminous-vivid-orange-border-color {
+			border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-amber-border-color {
+			border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+		}
+
+		.has-light-green-cyan-border-color {
+			border-color: var(--wp--preset--color--light-green-cyan) !important;
+		}
+
+		.has-vivid-green-cyan-border-color {
+			border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+		}
+
+		.has-pale-cyan-blue-border-color {
+			border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+		}
+
+		.has-vivid-cyan-blue-border-color {
+			border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+		}
+
+		.has-vivid-purple-border-color {
+			border-color: var(--wp--preset--color--vivid-purple) !important;
+		}
+
+		.has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+			background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+		}
+
+		.has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+			background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+		}
+
+		.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+			background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+		}
+
+		.has-luminous-vivid-orange-to-vivid-red-gradient-background {
+			background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+		}
+
+		.has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+			background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+		}
+
+		.has-cool-to-warm-spectrum-gradient-background {
+			background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+		}
+
+		.has-blush-light-purple-gradient-background {
+			background: var(--wp--preset--gradient--blush-light-purple) !important;
+		}
+
+		.has-blush-bordeaux-gradient-background {
+			background: var(--wp--preset--gradient--blush-bordeaux) !important;
+		}
+
+		.has-luminous-dusk-gradient-background {
+			background: var(--wp--preset--gradient--luminous-dusk) !important;
+		}
+
+		.has-pale-ocean-gradient-background {
+			background: var(--wp--preset--gradient--pale-ocean) !important;
+		}
+
+		.has-electric-grass-gradient-background {
+			background: var(--wp--preset--gradient--electric-grass) !important;
+		}
+
+		.has-midnight-gradient-background {
+			background: var(--wp--preset--gradient--midnight) !important;
+		}
+
+		.has-small-font-size {
+			font-size: var(--wp--preset--font-size--small) !important;
+		}
+
+		.has-medium-font-size {
+			font-size: var(--wp--preset--font-size--medium) !important;
+		}
+
+		.has-large-font-size {
+			font-size: var(--wp--preset--font-size--large) !important;
+		}
+
+		.has-x-large-font-size {
+			font-size: var(--wp--preset--font-size--x-large) !important;
+		}
+	</style>
+	<link rel='stylesheet' id='bootstrap-css-css' href='css/bootstrap.min.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='portfolio-style-css' href='css/main.css' type='text/css' media='' />
+	<link rel='shortlink' href='https://dluciotbackend.com.br/' />
+	<!-- Final Wordpress Header -->
+</head>
+
+<body>
+
+	<!-- navbar-->
+	<header id="home" class="header">
+		<div class="navbar-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<nav class="navbar navbar-expand-md">
+							<a class="navbar-brand" href="#hero">
+								<img src="../portfolio/img/dllogo64.png" alt="dluciot">
+							</a>
+							<button class="navbar-toggler" type="button" data-toggle="collapse"
+								data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+								aria-expanded="false" aria-label="Toggle navigation">
+								<span class="toggler-icon"></span>
+								<span class="toggler-icon"></span>
+								<span class="toggler-icon"></span>
+							</button>
+							<div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+								<ul id="menu-menu-principal" class="navbar-nav ml-auto">
+									<li id="menu-item-427"
+										class="active menu-item menu-item-type-custom menu-item-object-custom menu-item-427 nav-item">
+										<a href="#hero" class="nav-item page-scroll">Home</a></li>
+									<li id="menu-item-428"
+										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-428 nav-item">
+										<a href="#about" class="nav-item page-scroll">Sobre</a></li>
+									<li id="menu-item-488"
+										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-488 nav-item">
+										<a href="#portfolio" class="nav-item page-scroll">Portfólio</a></li>
+									<li id="menu-item-429"
+										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-429 nav-item">
+										<a href="#services" class="nav-item page-scroll">Serviços</a></li>
+									<li id="menu-item-430"
+										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-430 nav-item">
+										<a href="#education" class="nav-item page-scroll">Formação</a></li>
+									<li id="menu-item-431"
+										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-431 nav-item">
+										<a href="#experience" class="nav-item page-scroll">Experiências</a></li>
+									<li id="menu-item-432"
+										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-432 nav-item">
+										<a href="#contact" class="nav-item page-scroll">Contato</a></li>
+								</ul>
+							</div>
+						</nav>
+					</div>
+				</div>
 			</div>
-		  </section>
-		<h1 style="text-align: center;">Bem vindo(a) a minha página!</h1>
-		<center>
-			<a href=>
-				<img src="img/perfil.jpg">
-			</a>
-		</center>
-		<p id="titulo" style="text-align: center;"></p>
-		
+		</div>
+	</header>
 
+
+	<style type="text/css">
+		.hero {
+			background: url('../portfolio/img/hero.jpg') no-repeat center;
+
+		}
+	</style>
+	<!-- Hero Section-->
+	<section class="hero" id="hero">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-white">
+					<div class="introduction">
+						<h1 class="font-weight-normal text-yellow mb-0">Olá, eu sou</h1>
+						<h2 class="text-uppercase text-xl mb-0">
+							Dilsinei <span class="text-yellow">
+								Lúcio</span>
+						</h2>
+						<h3 class="font-weight-normal mb-5">Back-End .NET Developer</h3>
+						<p>Analista de Sistemas, estudante do bootcamp Pottencial .NET Developer - buscando aperfeiçoar
+							minhas habilidades em desenvolvimento back-end com .Net e C# e ganhar mais confiança no
+							desenvolvimento de projetos.<br />
+							Para saber mais <a href="#contact" class="link-scroll"><u>entre em contato.</u></a></p>
+						<div class="social text-left inline social-column-3">
+							<a href="https://www.facebook.com/dilsinei.lucioteixeira" target="_blank"
+								class="facebook hover-underline">
+								<span class="icon fab fa-facebook-f"></span>
+								<span class="social-text">Facebook</span>
+							</a>
+
+							<a href="https://www.linkedin.com/in/dilsineilucio/" target="_blank"
+								class="linkedin hover-underline">
+								<span class="icon fab fa-linkedin"></span>
+								<span class="social-text">Linkedin</span>
+							</a>
+
+							<a href="https://api.whatsapp.com/send?phone=5531995678465&amp;text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20or%C3%A7amento"
+								class="whatsapp hover-underline">
+								<span class="icon fab fa-whatsapp"></span>
+								<span class="social-text">WhatsApp</span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+
+	<!-- About Section-->
+	<section class="bg-light section-about no-padding-mobile" id="about">
+		<div class="container">
+			<header class="mb-5">
+				<h2 class="text-uppercase lined title">&lt;Sobre&gt;</h2>
+			</header>
+			<p class="lead mb-2 text-muted">Graduado em Analise e Desenvolvimento de Sistemas pela Universidade do Norte
+				do Paraná.</p>
+			<p class="line-height text-muted">Buscando novas tendências tecnológicas, iniciei o bootcamp da DIO,
+				Pottencial .NET Developer.</p>
+			<p class="text-muted mb-0">Maior insurtech do Brasil.</p>
+			<div class="mt-5">
+				<div class="about-author">
+					<a href="../portfolio/pdf/DilsineiCV2021 (2).pdf" class="btn-cv button_cv" title="Download CV">
+						<i class="ti-download"></i>Download CV</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="bg-white section-portfolio no-padding-mobile" id="portfolio">
+		<div class="portfolio-area">
+			<div class="container">
+				<header class="mb-5">
+					<h2 class="h3 text-uppercase lined title">
+						&lt;portfolio&gt; </h2>
+				</header>
+			</div>
+
+
+			<div id="gridder" class="gridder-grid fix hover-style2">
+
+				<div class="gridder-list  percent-25 percent-33 percent-50" data-griddercontent="#project-1">
+					<div class="single-portfolio">
+						<img src="../portfolio/img/foto1.jpg" alt="C#">
+						<div class="project-title">
+							<h3 class="white-color">C#</h3>
+							<h6 class="white-color">Pottencial</h6>
+						</div>
+					</div>
+				</div>
+				<div class="gridder-list  percent-25 percent-33 percent-50" data-griddercontent="#project-24">
+					<div class="single-portfolio">
+						<img src="../portfolio/img/foto2.jpeg" alt="Concentração">
+						<div class="project-title">
+							<h3 class="white-color">.NET</h3>
+							<h6 class="white-color">Bootcamp</h6>
+						</div>
+					</div>
+				</div>
+				<div class="gridder-list  percent-25 percent-33 percent-50" data-griddercontent="#project-22">
+					<div class="single-portfolio">
+						<img src="../portfolio/img/foto3.jpeg" alt="Back-End">
+						<div class="project-title">
+							<h3 class="white-color">Back-End</h3>
+							<h6 class="white-color">Desenvolvedor</h6>
+						</div>
+					</div>
+				</div>
+				<div class="gridder-list  percent-25 percent-33 percent-50" data-griddercontent="#project-21">
+					<div class="single-portfolio">
+						<img src="../portfolio/img/foto5.jpg" alt="Programação">
+						<div class="project-title">
+							<h3 class="white-color">Progamação de Sistemas</h3>
+							<h6 class="white-color">Requisitos</h6>
+						</div>
+					</div>
+				</div>
+				<div class="gridder-list  percent-25 percent-33 percent-50" data-griddercontent="#project-20">
+					<div class="single-portfolio">
+						<img src="../portfolio/img/foto6.jpg" alt="Desenvolvimento de Software">
+						<div class="project-title">
+							<h3 class="white-color">Desenvolvimento de Software</h3>
+							<h6 class="white-color">Analista</h6>
+						</div>
+					</div>
+				</div>
+				<div class="gridder-list  percent-25 percent-33 percent-50" data-griddercontent="#project-19">
+					<div class="single-portfolio">
+						<img src="../portfolio/img/foto7.jpg" alt="Unopar">
+						<div class="project-title">
+							<h3 class="white-color">Responsividade</h3>
+							<h6 class="white-color">Computadores</h6>
+						</div>
+					</div>
+				</div>
+				<div class="gridder-list  percent-25 percent-33 percent-50" data-griddercontent="#project-8">
+					<div class="single-portfolio">
+						<img src="../portfolio/img/foto8.jpg" alt="git">
+						<div class="project-title">
+							<h3 class="white-color">Git Hub</h3>
+							<h6 class="white-color">Versionamento</h6>
+						</div>
+					</div>
+				</div>
+				<div class="gridder-list  percent-25 percent-33 percent-50" data-griddercontent="#project-25">
+					<div class="single-portfolio">
+						<img src="../portfolio/img/foto9.jpg" alt="Pensamento Computacional">
+						<div class="project-title">
+							<h3 class="white-color">Pensamento Computacional</h3>
+							<h6 class="white-color">Boas Práticas</h6>
+						</div>
+					</div>
+				</div>
+	</section>
+	<!-- .section-portfolio End -->
+	<div class="container">
+		<!-- .Carregar Mais -->
+		<div class="section-more">
+			<a href="#" id="seeMore" class="btn-more btn-animated btn-small">Carregar Mais</a>
+		</div>
+	</div>
+
+	<!--  Parallax Section        -->
+	<section class="parallax-bg section-bg-parallax">
+		<div class="container">
+			<header class="mb-5 pb-4">
+				<h2 class="text-uppercaselined title lined">Habilidades</h2>
+			</header>
+			<div class="d-flex align-items-center justify-content-center justify-content-md-start flex-wrap">
+				<div class="card">
+					<figure class="figure-wrapper">
+						<div class="single-image-wrapper">
+							<img width="150" height="150" src="../portfolio/img/icons/csharp.png" class="img-fluid"
+								alt="Habilidades">
+						</div>
+					</figure>
+					<h3>C#</h3>
+				</div>
+				<div class="card">
+					<figure class="figure-wrapper">
+						<div class="single-image-wrapper">
+							<img width="150" height="150" src="../portfolio/img/icons/html.png" class="img-fluid"
+								alt="Habilidades">
+						</div>
+					</figure>
+					<h3>HTML5</h3>
+				</div>
+				<div class="card">
+					<figure class="figure-wrapper">
+						<div class="single-image-wrapper">
+							<img width="150" height="150" src="../portfolio/img/icons/css.png" class="img-fluid"
+								alt="Habilidades">
+						</div>
+					</figure>
+					<h3>CSS3</h3>
+				</div>
+				<div class="card">
+					<figure class="figure-wrapper">
+						<div class="single-image-wrapper">
+							<img width="150" height="150" src="../portfolio/img/icons/insta.png" class="img-fluid"
+								alt="Habilidades">
+						</div>
+					</figure>
+					<h3>Instagram</h3>
+				</div>
+				<div class="card">
+					<figure class="figure-wrapper">
+						<div class="single-image-wrapper">
+							<img width="150" height="150" src="../portfolio/img/icons/linkedin.png" class="img-fluid"
+								alt="Habilidades">
+						</div>
+					</figure>
+					<h3>LINKEDIN</h3>
+				</div>
+				<div class="card">
+					<figure class="figure-wrapper">
+						<div class="single-image-wrapper">
+							<img width="150" height="150" src="../portfolio/img/icons/net.png" class="img-fluid"
+								alt="Habilidades">
+						</div>
+					</figure>
+					<h3>.NET</h3>
+				</div>
+				<div class="card">
+					<figure class="figure-wrapper">
+						<div class="single-image-wrapper">
+							<img width="150" height="150" src="../portfolio/img/icons/steam.png" class="img-fluid"
+								alt="Habilidades">
+						</div>
+					</figure>
+					<h3>STEAM</h3>
+				</div>
+				<div class="card">
+					<figure class="figure-wrapper">
+						<div class="single-image-wrapper">
+							<img width="150" height="150" src="../portfolio/img/icons/git.png" class="img-fluid"
+								alt="Habilidades">
+						</div>
+					</figure>
+					<h3>GIT</h3>
+				</div>
+				<div class="card">
+					<figure class="figure-wrapper">
+						<div class="single-image-wrapper">
+							<img width="150" height="150" src="../portfolio/img/icons/ai.png" class="img-fluid"
+								alt="Habilidades">
+						</div>
+					</figure>
+					<h3>AI</h3>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Expertise Section        -->
+	<section class="section-services no-padding-mobile" id="services">
+		<div class="container">
+			<div class="introduction">
+				<header class="mb-5 pb-4">
+					<h2 class="text-uppercase lined title">&lt;serviços&gt;</h2>
+					<p class="lead font-weight-normal text-muted">Sou estudante de desenvolvimento Back-end.</p>
+				</header>
+			</div>
+			<div class="d-flex align-items-center flex-wrap">
+				<div class="col-md-6 mb-5">
+					<div class="introduction">
+						<div class="icon-box">
+							<div class="icon-wrap">
+								<img src="../portfolio/img/foto1.jpg" alt="Websites">
+							</div>
+							<h3 class="h4 fw-800"><span class=" text-yellow  mr-2">01</span>WEBSITES</h3>
+							<p class="text-gray ml-4 pl-3">Produção de websites responsivos.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 mb-5">
+					<div class="introduction">
+						<div class="icon-box">
+							<div class="icon-wrap">
+								<img src="../portfolio/img/foto10.jpg" alt="Websites">
+							</div>
+							<h3 class="h4 fw-800"><span class=" text-yellow  mr-2">02</span>WORDPRESS</h3>
+							<p class="text-gray ml-4 pl-3">Atualizações em seu site.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 mb-5">
+					<div class="introduction">
+						<div class="icon-box">
+							<div class="icon-wrap">
+								<img src="../portfolio/img/foto11.jpg" alt="Websites">
+							</div>
+							<h3 class="h4 fw-800"><span class=" text-yellow  mr-2">03</span>Levantamento de Requisitos
+							</h3>
+							<p class="text-gray ml-4 pl-3">Desenvolvimento agil.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 mb-5">
+					<div class="introduction">
+						<div class="icon-box">
+							<div class="icon-wrap">
+								<img src="img/foto2.jpeg" alt="Websites">
+							</div>
+							<h3 class="h4 fw-800"><span class=" text-yellow  mr-2">04</span>ECOMMERCE</h3>
+							<p class="text-gray ml-4 pl-3">Lojas Virtuais customizadas e WooComerce do WordPress.</p>
+						</div>
+					</div>
+				</div>
+
+
+
+			</div>
+		</div>
+	</section>
+	<!-- Education Section-->
+	<section class="bg-light bg-tecnology no-padding-mobile" id="education">
+		<div class="container">
+			<header class="mb-5 pb-4">
+				<h2 class="text-uppercase lined title lined">Formações</h2>
+			</header>
+			<!--  Timeline -->
+			<ul class="timeline">
+				<!-- Timeline item-->
+				<li class="timeline-item ml-3 pb-4">
+					<div class="timeline-arrow"></div>
+					<div class="row no-gutter">
+						<div class="col-lg-5 mb-4 mb-lg-0">
+							<p class="font-weight-bold mb-2 text-small">2000- 2000</p>
+							<h2 class="h6 mb-0 text-uppercase">Mauris volutpat ex eget libero fermentum. Proin ut
+								ultricies tellus.</h2>
+							<p class="text-small mb-0">bibendum erat iaculis</p>
+							<span class="small text-muted">Brasilia</span>
+						</div>
+						<div class="col-lg-7">
+							<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit
+								amet ex at nulla blandit gravida.
+								Pellentesque egestas odio eu semper tristique. Fusce feugiat odio eget sapien
+								pellentesque dapibus id eget tortor.
+							</p>
+						</div>
+					</div>
+				</li>
+				<!-- Timeline item-->
+				<li class="timeline-item ml-3 pb-4">
+					<div class="timeline-arrow"></div>
+					<div class="row no-gutter">
+						<div class="col-lg-5 mb-4 mb-lg-0">
+							<p class="font-weight-bold mb-2 text-small">2000 - 2001</p>
+							<h2 class="h6 mb-0 text-uppercase">Ut vel ex sodales</h2>
+							<p class="text-small mb-0">Praesent gravida turpis</p>
+							<span class="small text-muted">Minas Gerais</span>
+						</div>
+						<div class="col-lg-7">
+							<p class="text-muted">Aliquam et velit mauris. Praesent mattis nisl vel diam egestas
+								molestie. Donec sit amet molestie erat. Pellentesque habitant morbi tristique senectus
+								et netus et malesuada fames ac turpis egestas. Morbi quis lectus quis quam volutpat
+								sollicitudin. Pellentesque lectus ante, aliquam quis dignissim vel, placerat lacinia
+								nulla. </p>
+						</div>
+					</div>
+				</li>
+				<!-- Timeline item-->
+				<li class="timeline-item ml-3 pb-4">
+					<div class="timeline-arrow"></div>
+					<div class="row no-gutter">
+						<div class="col-lg-5 mb-4 mb-lg-0">
+							<p class="font-weight-bold mb-2 text-small">2011</p>
+							<h2 class="h6 mb-0 text-uppercase">Aenean tincidunt </h2>
+							<p class="text-small mb-0">Nam lobortis, mauris</p>
+							<span class="small text-muted">Manaus</span>
+						</div>
+						<div class="col-lg-7">
+							<p class="text-muted">Nunc velit eros, facilisis nec leo quis, lacinia tristique ligula. In
+								dignissim leo sed massa laoreet, non convallis augue faucibus. Cras et pulvinar nulla,
+								at suscipit leo. Sed eget enim nec neque tincidunt accumsan nec ac ante. Aliquam
+								condimentum est justo, quis pharetra mauris venenatis ac. Cras a ligula at arcu pulvinar
+								pulvinar eu ut odio. Suspendisse sodales velit sapien, vitae blandit ipsum convallis
+								vel. </p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<!-- Experience Section        -->
+	<section id="experience" class="no-padding-mobile">
+		<div class="container">
+			<header class="mb-5 pb-4">
+				<h2 class="text-uppercase  lined title lined">Experiências</h2>
+			</header>
+			<!--  Timeline -->
+			<ul class="timeline">
+				<!-- Timeline item-->
+				<li class="timeline-item ml-3 pb-4">
+					<div class="timeline-arrow"></div>
+					<div class="row no-gutter">
+						<div class="col-lg-5 mb-4 mb-lg-0">
+							<p class="font-weight-bold mb-2text-small">NOVEMBRO 2020 - Atualmente</p>
+							<h2 class="h6 mb-0 text-uppercase">Sejusp</h2>
+							<p class="text-small mb-0">Front End Developer</p><span class="small text-muted">Minas Gerais</span>
+						</div>
+						<div class="col-lg-7">
+							<p class="text-muted">Desenvolvimento, boas práticas, usabilidade e manutenções em geral.</p>
+						</div>
+					</div>
+				</li>
+				
+			</ul>
+		</div>
+	</section>
+	<!-- Education Section        -->
+	<section class="bg-light no-padding-mobile" id="contact">
+		<div class="container">
+			<header class="mb-5 pb-4">
+				<h2 class="text-uppercase  lined title lined">Contato</h2>
+			</header>
+			<div class="row">
+				<div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+					<div class="px-4 py-5 text-center contact-item shadow-sm"><i
+							class="fas fa-map-marker-alt fa-2x mb-4"></i>
+						<h4 class="contact-item-title h6 text-uppercase">Localização</h4>
+						<p class="text-small mb-0">Betim, Minas Gerais</p>
+					</div>
+				</div>
+
+
+				<div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+					<a class="px-4 py-5 text-center contact-item shadow-sm d-block reset-anchor"
+						href="tel:5531995678465">
+						<i class="fas fa-mobile fa-2x mb-4"></i>
+						</i>
+						<h4 class="contact-item-title h6 text-uppercase">Tel e Whatsapp</h4>
+						<p class="text-small mb-0">31 99567 8465</p>
+					</a>
+				</div>
+
+
+				<div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+					<a class="px-4 py-5 text-center contact-item shadow-sm d-block reset-anchor"
+						href="https://dilsinei.github.io/portfolio//"><i class="fas fa-globe-americas fa-2x mb-4">
+						</i>
+						<h4 class="contact-item-title h6 text-uppercase">Website</h4>
+						<p class="text-small mb-0">https://dilsinei.github.io/portfolio/</p>
+					</a>
+				</div>
+				<div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+					<a class="px-4 py-5 text-center contact-item shadow-sm d-block reset-anchor"
+						href="mailto:dilsinei@gmail.com"><i class="fas fa-envelope fa-2x mb-4"></i>
+						<h4 class="contact-item-title h6 text-uppercase">Email</h4>
+						<p class="text-small mb-0">dilsinei@gmail.com</p>
+					</a></div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer-->
+	<footer>
+		<div class="container text-center section">
+			<div class="d-flex align-items-center justify-content-center">
+				<div class="col-md-7">
+					<div class="column-information-dev">
+						<h2 class="text-uppercase">Dilsinei Lúcio </h2>
+						<h3 class="text-yellow text-uppercase mb-2">Desenvolvedor Back End</h3>
+						<h4 class="text-yellow text-uppercase mb-2">Estudante.</h4>
+						<p class="text-muted my-4"><i>"Todos nós sofremos e todos temos o potencial de superar".</i> (NIGHTBIRDE, 2022).</p>
+						
+					</div>
+
+					<ul class="list-inline mb-0">
+						<li class="list-inline-item"><a class="social-link"
+								href="https://www.facebook.com/dilsinei.lucioteixeira" target="_blank"><i
+									class="fab fa-facebook-f"></i></a></li>
+						<li class="list-inline-item"><a class="social-link"
+								href="https://www.linkedin.com/in/dilsineilucio/"><i
+									class="fab fa-linkedin"></i></a></li>
+						<li class="list-inline-item"><a class="social-link"
+								href="https://api.whatsapp.com/send?phone=5531995678465&amp;text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20or%C3%A7amento"><i
+									class="fab fa-whatsapp"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="copyrights">
+			<div class="container py-4  text-center">
+				<p class="mb-0 text-white ">&copy; 2022 - Todos os direitos reservados</p>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Global site tag (gtag.js) - Google Analytics 
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131702061-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-131702061-1');
+	</script>
+	-->
+
+	<!-- Inicio Footer -->
+	<script type='text/javascript' 	src='dist/js/jquery-3.4.1.min.js' id='jquery-js'></script>
+	<script type='text/javascript' 	src='dist/js/visibility.js' id='visibility-js'></script>
+	<script type='text/javascript' 	src='dist/js/vendor/jquery.gridder.js'id='gridder-js'></script>
+	<script type='text/javascript'	src='dist/js/plugins.js'				id='plugins-script-js'></script>
+	<script type='text/javascript'	src='dist/js/main.js'					id='main-script-js'></script>
+	<script type='text/javascript'	src='dist/js/bootstrap.bundle.min.js'	id='bootstrap-bundle-js-js'></script>
 	
-	</body>
-	</html>	
+	<a href="#" class="back-to-top">
+		<i class="lni lni-arrow-up"></i>
+		</a>
+		
+		<div id="preloader">
+		<div class="loader" id="loader-1"></div>
+		</div>
+	<!-- Final Footer -->
+
+</body>
+
+</html>
